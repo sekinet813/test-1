@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-1
+spec:
+  containers:
+  - name: t-1
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: test02
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-2
+spec:
+  containers:
+  - name: t-2
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: test03
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-3
+spec:
+  containers:
+  - name: t-3
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: test04
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-4
+spec:
+  containers:
+  - name: t-4
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: test04
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-5
+spec:
+  containers:
+  - name: t-5
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: test04
