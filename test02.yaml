@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: t-1
+  name: test-scheduler-cronjob
 spec:
   containers:
-  - name: t-1
+  - name: test-scheduler-cronjob
     image: busybox
-    command: ["sleep" , "60"]
+    command: ["ping -c 60"]
   nodeName: test04
