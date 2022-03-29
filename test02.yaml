@@ -6,5 +6,5 @@ spec:
   containers:
   - name: test-scheduler-cronjob
     image: busybox
-    command: ["ping -c 60"]
+    command: ["ping -c 60 127.0.0.1"]
   nodeName: test04
