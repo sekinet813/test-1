@@ -1,10 +1,13 @@
-apiVersion: v1
-kind: Pod
+apiVersion: batch/v1
+kind: Job
 metadata:
-  name: test-scheduler-cronjob
+  name: pi
 spec:
-  containers:
-  - name: test-scheduler-cronjob
-    image: busybox
-    command: ["ping -c 60 127.0.0.1"]
-  nodeName: test04
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(6000)"]
+      restartPolicy: Never
+  backoffLimit: 4
