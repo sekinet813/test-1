@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-5
+spec:
+  containers:
+  - name: t-5
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: test04
